@@ -60,7 +60,7 @@ function LikesPage() {
       setIsPlaying(false);
     }
     return () => {
-      audioPlayer.current.pause(); 
+      audioPlayer.current.pause();
     };
   }, [currentlyPlaying]);
 
