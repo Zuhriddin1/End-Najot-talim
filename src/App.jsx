@@ -6,11 +6,9 @@ import DetailsPage from "./pages/DetailsPage";
 import { create } from "../src/redux/AuthSlice";
 import { getToken } from "../src/components/utils";
 import LikesPage from "./pages/Like";
-
 const App = () => {
   const dispatch = useDispatch();
   const token = useSelector((state) => state.auth.token);
-
   useEffect(() => {
     const fetchToken = async () => {
       const authData = await getToken();
@@ -20,7 +18,6 @@ const App = () => {
     };
     fetchToken();
   }, [dispatch]);
-
   return (
     <div className="App">
       <Routes>

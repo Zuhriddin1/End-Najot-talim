@@ -59,6 +59,9 @@ function LikesPage() {
       audioPlayer.current.src = "";
       setIsPlaying(false);
     }
+    return () => {
+      audioPlayer.current.pause(); 
+    };
   }, [currentlyPlaying]);
 
   const handlePlayPauseClick = () => {
